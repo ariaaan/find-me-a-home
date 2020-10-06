@@ -1,0 +1,1 @@
+"""LaVoz scrapy project."""
