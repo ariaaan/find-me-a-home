@@ -1,1 +1,2 @@
-scrapy==2.3.0
+scrapy~=2.3.0
+jsonlines~=1.2.0

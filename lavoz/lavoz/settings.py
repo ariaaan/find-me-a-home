@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = 'lavoz.spiders'
 DATE = datetime.datetime.now().strftime('%Y-%m-%d')
 
 FEEDS = {
-    f'{DATE}_listings.jsonl': {
+    f'./listings/{DATE}_listings.jsonl': {
         'format': 'jsonlines',
         'encoding': 'utf8',
         'store_empty': False,
