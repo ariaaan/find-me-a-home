@@ -10,6 +10,8 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='new-listings')
     parser.add_argument('listing_folder', help='path for the listing folder')
     parser.add_argument('output_folder', help='path for the output folder')
+    parser.add_argument('--verbose', '-v', action='store_true', default=False, help='verbose mode')
+
     args = parser.parse_args()
     return args
 
@@ -57,3 +59,7 @@ if __name__ == '__main__':
             new_listings,
             open(new_listings_output_path, 'w'),
         )
+
+        if args.verbose and listing_2 == listing_files[-1]:
+            for idx, listing in enumerate(new_listings):        
+                print(f'{idx}: {listing}')
